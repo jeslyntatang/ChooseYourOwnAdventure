@@ -6,37 +6,132 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You are searching for your explorer friend, who went missing in the snowy mountains while exploring a few weeks ago.",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Turn left.",
+                    nextLevel: "left",
+                },
+                
+                { 
+                    text:"Go straight.",
+                    nextLevel:"middle",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Turn right.",
+                    nextLevel: "right",
                 },
             ]
         },
-
-        cave: {
+        
+        middle: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "Ai ya! You've run into a bear!",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Run away",
+                    nextLevel: "run",
+                },
+                {
+                    text:"Give it honey.",
+                    nextLevel: "honey",
+                }
+            ]
+        },
+        
+        honey: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "Luckily, you carried honey in your bag. After giving some to the bear, it is appeased and lets you pass. You are now faced with a fork in the road, and you see that one path leads to a village and the other to a cave.",
+            choices: [
+                {
+                    text: "walk towards the village",
+                    nextLevel: "village",
+                },
+                {
+                    text: "walk towards the cave",
+                    nextLevel:"village",
+                },
+            ]
+        },
+        
+        run: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You outrun the bear, but soon realize that you have wandered from the perimeters of your map. You are lost.",
+            choices: [
+                {
+                    text: "back to beginning",
                     nextLevel: "start",
                 },
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
+        left: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You come across a village.",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Enter it.",
+                    nextLevel: "village",
+                },
+                {
+                    text:"Move past it.",
+                    nextLevel: "lost",
+                }
+            ]
+        },
+        
+        village: { 
+            background_image:"fire.gif",
+            music:"Final-Fantasy-7-Boss-Battle.mp3",
+            message:"A villager offers you a map to a cave, but night has fallen and it is too risky to explore in the dark.",
+            choices: [
+                {
+                    text:"back to beginning",
+                    nextLevel:"start",
+                },
+                ]
+        },
+
+        right: { 
+            background_image:"fire.gif",
+            music:"Final-Fantasy-7-Boss-Battle.mp3",
+            message:"You come across a cave.",
+            choices: [
+                {
+                    text:"Enter it.",
+                    nextLevel:"cave",
+                },
+                {
+                    text:"Move on.",
+                    nextLevel:"lost",
+                },
+                ]
+        },
+        
+        cave: { 
+            background_image:"fire.gif",
+            music:"Final-Fantasy-7-Boss-Battle.mp3",
+            message:"You find your friend taking shelter in the cave. You bring them home.",
+            choices: [
+                {
+                    text:"back to beginning",
+                    nextLevel:"start",
+                },
+                ]
+        },
+              
+            
+
+        lost: {
+            message: "You lose track of time as you wander the mountains. Eventually, you realize that you've gotten lost.",
+            choices: [
+                {
+                    text: "start over",
                     nextLevel: "start",
                 },
             ]
