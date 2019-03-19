@@ -9,17 +9,17 @@ var game = {
             message: "You are searching for your explorer friend, who went missing in the snowy mountains while exploring a few weeks ago.",
             choices: [
                 {
-                    text: "Turn left.",
+                    text: "Turn left",
                     nextLevel: "left",
                 },
                 
                 { 
-                    text:"Go straight.",
+                    text:"Go straight",
                     nextLevel:"middle",
                 },
 
                 {
-                    text: "Turn right.",
+                    text: "Turn right",
                     nextLevel: "right",
                 },
             ]
@@ -35,7 +35,7 @@ var game = {
                     nextLevel: "run",
                 },
                 {
-                    text:"Give it honey.",
+                    text:"Offer honey",
                     nextLevel: "honey",
                 }
             ]
@@ -75,11 +75,11 @@ var game = {
             message: "You come across a village.",
             choices: [
                 {
-                    text: "Enter it.",
+                    text: "Enter it",
                     nextLevel: "village",
                 },
                 {
-                    text:"Move past it.",
+                    text:"Move past it",
                     nextLevel: "lost",
                 }
             ]
@@ -103,11 +103,11 @@ var game = {
             message:"You come across a cave.",
             choices: [
                 {
-                    text:"Enter it.",
+                    text:"Enter it",
                     nextLevel:"cave",
                 },
                 {
-                    text:"Move on.",
+                    text:"Move past it",
                     nextLevel:"lost",
                 },
                 ]
