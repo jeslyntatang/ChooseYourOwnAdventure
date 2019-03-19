@@ -26,7 +26,7 @@ var game = {
         },
         
         middle: {
-            background_image: "fire.gif",
+            background_image: "bear.jpg",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
             message: "Ai ya! You've run into a bear!",
             choices: [
@@ -42,8 +42,8 @@ var game = {
         },
         
         honey: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            background_image: "fork.jpeg",
+            music: "Zelda-Labrynth.mp3",
             message: "Luckily, you carried honey in your bag. After giving some to the bear, it is appeased and lets you pass. You are now faced with a fork in the road, and you see that one path leads to a village and the other to a cave.",
             choices: [
                 {
@@ -52,14 +52,14 @@ var game = {
                 },
                 {
                     text: "walk towards the cave",
-                    nextLevel:"village",
+                    nextLevel:"cave",
                 },
             ]
         },
         
         run: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            background_image: "intro-bg.jpg",
+            music: "98_Lost_Mine.mp3",
             message: "You outrun the bear, but soon realize that you have wandered from the perimeters of your map. You are lost.",
             choices: [
                 {
@@ -70,8 +70,8 @@ var game = {
         },
 
         left: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            background_image: "village2.jpg",
+            music: "Halo-Theme.mp3",
             message: "You come across a village.",
             choices: [
                 {
@@ -86,8 +86,8 @@ var game = {
         },
         
         village: { 
-            background_image:"fire.gif",
-            music:"Final-Fantasy-7-Boss-Battle.mp3",
+            background_image:"village2.jpg",
+            music:"Zelda-Labrynth.mp3",
             message:"A villager offers you a map to a cave, but night has fallen and it is too risky to explore in the dark.",
             choices: [
                 {
@@ -98,8 +98,8 @@ var game = {
         },
 
         right: { 
-            background_image:"fire.gif",
-            music:"Final-Fantasy-7-Boss-Battle.mp3",
+            background_image:"cave.jpg",
+            music:"Halo-Theme.mp3",
             message:"You come across a cave.",
             choices: [
                 {
@@ -114,9 +114,9 @@ var game = {
         },
         
         cave: { 
-            background_image:"fire.gif",
-            music:"Final-Fantasy-7-Boss-Battle.mp3",
-            message:"You find your friend taking shelter in the cave. You bring them home.",
+            background_image:"cave.jpg",
+            music:"Stranger-Things-Theme.mp3",
+            message:"You find your friend taking shelter in the cave. They are weakened by hunger and exhaustion, but are glad to see you. You manage to bring them to a nearby village, and finally, home.",
             choices: [
                 {
                     text:"back to beginning",
@@ -129,6 +129,8 @@ var game = {
 
         lost: {
             message: "You lose track of time as you wander the mountains. Eventually, you realize that you've gotten lost.",
+            music:"98_Lost_Mine.mp3",
+            background_image:"intro-bg.jpg",
             choices: [
                 {
                     text: "start over",
